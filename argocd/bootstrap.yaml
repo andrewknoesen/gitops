@@ -12,11 +12,11 @@ spec:
     helm:
       releaseName: argocd
       valueFiles:
-        - values.yaml
+      - values.yaml
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: false
+  syncPolicy: {}
+#    automated:
+ #     prune: true
+  #    selfHeal: false
