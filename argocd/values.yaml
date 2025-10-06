@@ -1,5 +1,5 @@
 # homelab-gitops/system/argocd/values.yaml
-argocd:
+server:
   service:
     type: NodePort
     nodePort: 30080
