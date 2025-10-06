@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/andrewknoesen/gitops.git
     targetRevision: main
-    path: argocd
+    path: ./argocd/
     helm:
       releaseName: argocd
       valueFiles:
