@@ -1,0 +1,14 @@
+# homelab-gitops/system/argocd/values.yaml
+server:
+  service:
+    type: NodePort
+    nodePort: 30080
+    annotations: {}
+    labels: {}
+
+configs:
+  params:
+    server.insecure: true  # so you can use http:// without certs
+  cm:
+    timeout.reconciliation: 30s
+

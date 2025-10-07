@@ -8,11 +8,11 @@ spec:
   source:
     repoURL: https://github.com/andrewknoesen/gitops.git
     targetRevision: main
-    path: argocd
+    path: apps
     helm:
       releaseName: argocd
       valueFiles:
-      - values.yaml
+      - argocd.values.yaml
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
