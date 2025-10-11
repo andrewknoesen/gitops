@@ -4,7 +4,7 @@ metadata:
   name: metallb
   namespace: argocd
 spec:
-  project: network
+  project: metallb
   source:
     repoURL: https://github.com/andrewknoesen/network.git
     targetRevision: main
