@@ -16,3 +16,7 @@ spec:
       kind: CustomResourceDefinition
     - group: rbac.authorization.k8s.io
       kind: ClusterRole
+    - group: networking.k8s.io
+      kind: IngressClass
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
