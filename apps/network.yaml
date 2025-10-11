@@ -22,3 +22,8 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+  clusterResourceWhitelist:
+    - group: networking.k8s.io
+      kind: IngressClass
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
