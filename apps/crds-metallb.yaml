@@ -3,9 +3,9 @@ kind: IPAddressPool
 metadata:
   name: loadbalancer
   namespace: loadbalancer
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
+  dependsOn:
+    - metallb
   addresses:
     - 192.168.0.245-192.168.0.255
 
@@ -15,8 +15,8 @@ kind: L2Advertisement
 metadata:
   name: traefik-l2
   namespace: loadbalancer
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
+  dependsOn:
+    - metallb
   ipAddressPools:
     - loadbalancer
