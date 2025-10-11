@@ -2,7 +2,7 @@ apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: loadbalancer
-  namespace: metallb-system
+  namespace: loadbalancer
 spec:
   addresses:
     - 192.168.0.245-192.168.0.255
