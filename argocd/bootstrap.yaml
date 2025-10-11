@@ -4,7 +4,7 @@ metadata:
   name: argocd
   namespace: argocd
 spec:
-  project: argocd
+  project: default
   source:
     repoURL: https://github.com/andrewknoesen/gitops.git
     targetRevision: main
