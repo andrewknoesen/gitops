@@ -32,21 +32,4 @@ spec:
       kind: IngressClass
     - group: rbac.authorization.k8s.io
       kind: ClusterRoleBinding
----
-apiVersion: metallb.io/v1beta1
-kind: IPAddressPool
-metadata:
-  name: loadbalancer
-  namespace: argocd
-spec:
-  addresses:
-    - 192.168.0.245-192.168.0.255
----
-apiVersion: metallb.io/v1beta1
-kind: L2Advertisement
-metadata:
-  name: traefik-l2
-  namespace: argocd
-spec:
-  ipAddressPools:
-    - traefik-pool
+
