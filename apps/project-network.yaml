@@ -24,7 +24,7 @@ spec:
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: network
+  name: loadbalancer
   namespace: metallb-system
 spec:
   addresses:
@@ -34,7 +34,7 @@ apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
   name: traefik-l2
-  namespace: network
+  namespace: loadbalancer
 spec:
   ipAddressPools:
     - traefik-pool
