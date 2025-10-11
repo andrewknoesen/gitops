@@ -6,6 +6,7 @@ argo-cd:
       nodePort: 30080
       annotations: {}
       labels: {}
+  namespace: argocd
 
   configs:
     params:
