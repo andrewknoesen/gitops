@@ -8,7 +8,7 @@ metadata:
 spec:
   project: virtual-business-card
   source:
-    repoURL: https://github.com/andrewknoesen/virtual_business_card.git
+    repoURL: https://github.com/andrewknoesen/nfc_business_card.git
     targetRevision: main
     path: charts
     helm:
