@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: virtual_business_card
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  project: virtual_business_card
+  source:
+    repoURL: https://github.com/andrewknoesen/virtual_business_card.git
+    targetRevision: main
+    path: charts
+    helm:
+      releaseName: virtual_business_card
+      valueFiles:
+        - values.yaml
+  destination:
+    namespace: virtual_business_card
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
