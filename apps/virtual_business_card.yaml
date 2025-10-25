@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: virtual-business0card
+  name: virtual-business-card
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "1"
