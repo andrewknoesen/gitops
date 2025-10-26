@@ -20,3 +20,7 @@ spec:
       kind: IngressClass
     - group: rbac.authorization.k8s.io
       kind: ClusterRoleBinding
+    - group: "gateway.networking.k8s.io"
+      kind: GatewayClass
+    - group: "gateway.networking.k8s.io"
+      kind: Gateway
