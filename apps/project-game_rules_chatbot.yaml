@@ -16,3 +16,5 @@ spec:
       kind: CustomResourceDefinition
     - group: rbac.authorization.k8s.io
       kind: ClusterRole
+    - group: admissionregistration.k8s.io
+      kind: MutatingWebhookConfiguration
