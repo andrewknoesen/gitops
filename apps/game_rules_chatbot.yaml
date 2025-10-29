@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: virtual-business-card
+  name: game-rules-chatbot
   namespace: argocd
 spec:
-  project: virtual-business-card
+  project: game-rules-chatbot
   source:
-    repoURL: https://github.com/andrewknoesen/nfc_business_card.git
+    repoURL: https://github.com/andrewknoesen/game-rules-chatbot.git
     targetRevision: main
     path: charts
     helm:
-      releaseName: virtual-business-card
+      releaseName: game-rules-chatbot
       valueFiles:
         - values.yaml
   destination:
-    namespace: virtual-business-card
+    namespace: game-rules-chatbot
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
