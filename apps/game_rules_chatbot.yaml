@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
     targetRevision: main
-    path: charts
+    path: chart
     helm:
       releaseName: game-rules-chatbot
       valueFiles:
