@@ -6,7 +6,7 @@ metadata:
 spec:
   project: game-rules-chatbot
   source:
-    repoURL: https://github.com/andrewknoesen/game-rules-chatbot.git
+    repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
     targetRevision: main
     path: charts
     helm:
