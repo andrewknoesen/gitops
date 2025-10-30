@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: game-rules-chatbot
+  namespace: argocd
+spec:
+  project: game-rules-chatbot
+  source:
+    repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
+    targetRevision: main
+    path: charts/app
+    helm:
+      releaseName: game-rules-chatbot
+      valueFiles:
+        - values.yaml
+  destination:
+    namespace: game-rules-chatbot
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
