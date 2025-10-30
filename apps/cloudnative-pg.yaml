@@ -7,9 +7,9 @@ metadata:
 spec:
   project: cnpg
   source:
-    repoURL: https://cloudnative-pg.github.io/charts
-    chart: cloudnative-pg
-    targetRevision: 0.26.1
+    repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
+    targetRevision: main
+    path: charts/app
   destination:
     server: https://kubernetes.default.svc
     namespace: cnpg-system
