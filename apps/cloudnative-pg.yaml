@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
     targetRevision: main
-    path: charts/cluster_infra/postgesql_infra
+    path: charts/cluster_infra/postgresql_infra
   destination:
     server: https://kubernetes.default.svc
     namespace: cnpg-system
