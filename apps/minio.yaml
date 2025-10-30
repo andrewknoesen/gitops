@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cnpg-operator
+  name: minio-operator
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 spec:
-  project: cnpg
+  project: minio
   source:
     repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
     targetRevision: main
-    path: charts/cluster_infra/postgresql_infra
+    path: charts/cluster_infra/minio_infra
     helm:
-      releaseName: cnpg-operator
+      releaseName: minio-operator
       valueFiles:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: cnpg-system
+    namespace: minio-operator
   syncPolicy:
     automated:
       prune: true
