@@ -1,26 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: network
-  namespace: argocd
+  name: minio-operator
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
-  project: network
+  project: minio
   source:
-    repoURL: https://github.com/andrewknoesen/network.git
+    repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
     targetRevision: main
-    path: charts/network
+    path: charts/cluster_infra/minio_infra
     helm:
-      releaseName: network
+      releaseName: minio-operator
       valueFiles:
         - values.yaml
   destination:
-    namespace: network
     server: https://kubernetes.default.svc
+    namespace: minio-operator
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true

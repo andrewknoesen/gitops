@@ -1,22 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: network
+  name: game-rules-chatbot
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
-  project: network
+  project: game-rules-chatbot
   source:
-    repoURL: https://github.com/andrewknoesen/network.git
+    repoURL: https://github.com/andrewknoesen/games_rule_chatbot.git
     targetRevision: main
-    path: charts/network
+    path: charts/app
     helm:
-      releaseName: network
+      releaseName: game-rules-chatbot
       valueFiles:
         - values.yaml
   destination:
-    namespace: network
+    namespace: game-rules-chatbot
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
